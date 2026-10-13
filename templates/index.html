@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Real Estate Intelligence Platform</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏠 AI Real Estate Intelligence Platform</h1>
+            <p>Predict prices, get smart recommendations, and consult AI market experts.</p>
+        </header>
+
+        <div class="grid">
+            <!-- Price Prediction Card -->
+            <section class="card">
+                <h2>Price Predictor</h2>
+                <form id="predict-form">
+                    <input type="number" id="OverallQual" placeholder="Overall Quality (1-10)" required>
+                    <input type="number" id="GrLivArea" placeholder="Living Area (sq ft)" required>
+                    <input type="number" id="GarageCars" placeholder="Garage Cars Capacity" required>
+                    <input type="number" id="TotalBsmtSF" placeholder="Total Basement SF" required>
+                    <input type="number" id="FullBath" placeholder="Full Bathrooms" required>
+                    <input type="number" id="YearBuilt" placeholder="Year Built" required>
+                    <input type="text" id="Neighborhood" placeholder="Neighborhood (e.g., CollgCr)" required>
+                    <button type="submit">Predict Price</button>
+                </form>
+                <div id="prediction-result" class="result"></div>
+            </section>
+
+            <!-- Recommendations Card -->
+            <section class="card">
+                <h2>Property Recommendations</h2>
+                <form id="rec-form">
+                    <input type="number" id="max_budget" placeholder="Max Budget ($)" required>
+                    <input type="number" id="min_beds" placeholder="Min Bedrooms" required>
+                    <input type="text" id="rec_neighborhood" placeholder="Neighborhood (Optional)">
+                    <button type="submit">Find Properties</button>
+                </form>
+                <div id="rec-results" class="result"></div>
+            </section>
+        </div>
+
+        <!-- AI Chatbot & RAG Section -->
+        <section class="card full-width">
+            <h2>AI Assistant & Knowledge RAG</h2>
+            <div class="chat-box">
+                <input type="text" id="chat-input" placeholder="Ask about market trends, buying tips, or legal documents...">
+                <button id="chat-btn">Ask AI</button>
+            </div>
+            <div id="chat-response" class="result"></div>
+        </section>
+    </div>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
